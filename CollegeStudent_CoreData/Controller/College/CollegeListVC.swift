@@ -35,6 +35,8 @@ extension CollegeListVC {
     }
 }
 
+
+//MARK : Tableview Datasource
 extension CollegeListVC : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,6 +51,7 @@ extension CollegeListVC : UITableViewDataSource {
     }
 }
 
+//MARK : Tableview Delegate
 extension CollegeListVC : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
