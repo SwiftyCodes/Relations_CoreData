@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+    </dependencies>
+    <scenes>
+        <!--CollegeDetailsVC-->
+        <scene sceneID="QIg-Ak-8Wn">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CollegeDetailsVC" storyboardName="College" referencedIdentifier="CollegeDetailsVC" id="AcA-9A-9p5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tQh-3O-upJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="710" y="110"/>
+        </scene>
+        <!--CollegeListVC-->
+        <scene sceneID="VLX-pt-KvE">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CollegeListVC" storyboardName="College" referencedIdentifier="CollegeListVC" id="FSz-Bf-Jtb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GX3-sQ-DcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709.60000000000002" y="-564.46776611694156"/>
+        </scene>
+        <!--CollegeFormVC-->
+        <scene sceneID="tyw-xU-Bci">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CollegeFormVC" storyboardName="College" referencedIdentifier="CollegeFormVC" id="Hid-k2-vcf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HCh-Fa-MMm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1401" y="-564"/>
+        </scene>
+    </scenes>
+</document>
