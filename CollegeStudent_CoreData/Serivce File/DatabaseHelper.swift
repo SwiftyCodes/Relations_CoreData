@@ -29,23 +29,6 @@ class DatabaseHelper : NSObject {
         return allData
     }
     
-    //MARK: Delete - College
-    func delete(atIndex index: Int, fromEntity entity: String) -> [NSManagedObject] {
-        
-        var allData = fetchDataFromEntity(fromEntity: entity)
-        context?.delete(allData[index]) // Remove data from Entity
-        allData.remove(at: index) // Remove data from Array
-        
-        do{
-            try context?.save()
-            print("Data Deleted Successfully")
-        }catch{
-            print("Error Deleting data")
-        }
-        
-        return allData
-    }
-    
     //MARK: Create - College
     func createCollege(objectOf object: [String:Any]) -> Bool {
         let collegeObject = NSEntityDescription.insertNewObject(forEntityName: "College", into: context!) as! College
@@ -62,6 +45,23 @@ class DatabaseHelper : NSObject {
             print("Error saving data at College")
             return false
         }
+    }
+    
+    //MARK: Delete - College
+    func delete(atIndex index: Int, fromEntity entity: String) -> [NSManagedObject] {
+        
+        var allData = fetchDataFromEntity(fromEntity: entity)
+        context?.delete(allData[index]) // Remove data from Entity
+        allData.remove(at: index) // Remove data from Array
+        
+        do{
+            try context?.save()
+            print("Data Deleted Successfully")
+        }catch{
+            print("Error Deleting data")
+        }
+        
+        return allData
     }
     
     //MARK: Update - College
