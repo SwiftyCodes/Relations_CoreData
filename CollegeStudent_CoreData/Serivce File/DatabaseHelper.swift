@@ -98,7 +98,6 @@ class DatabaseHelper : NSObject {
     func deleteStudent(atIndex index: Int, fromEntity entity: String, fromCollege thisCollege:College) -> [NSManagedObject] {
         
         var allData = thisCollege.students?.allObjects as! [NSManagedObject]
-        thisCollege.removeFromStudents(thisCollege.students?.allObjects[index] as! Student)
         context?.delete(allData[index]) // Remove data from Entity
         allData.remove(at: index) // Remove data from Array
         
