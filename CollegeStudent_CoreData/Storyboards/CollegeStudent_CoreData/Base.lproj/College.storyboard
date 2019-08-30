@@ -98,6 +98,12 @@
                                                         <action selector="studentListAction:" destination="m7Z-Dh-5gl" eventType="touchUpInside" id="UYF-hd-xEE"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeR-no-j0Z">
+                                                    <rect key="frame" x="320.5" y="93" width="29" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="fWd-oS-qxg" firstAttribute="top" secondItem="XAg-eT-W6e" secondAttribute="bottom" constant="8" id="0sF-Q6-ThM"/>
@@ -106,6 +112,7 @@
                                                 <constraint firstItem="0yF-cI-nmc" firstAttribute="centerY" secondItem="ZkZ-iO-ckh" secondAttribute="centerY" id="AYU-5B-6pH"/>
                                                 <constraint firstItem="bQC-8M-Xan" firstAttribute="leading" secondItem="r2j-yK-dpu" secondAttribute="trailing" constant="40" id="Hws-DV-t9Y"/>
                                                 <constraint firstItem="fWd-oS-qxg" firstAttribute="leading" secondItem="ZkZ-iO-ckh" secondAttribute="leadingMargin" id="KAh-ti-hel"/>
+                                                <constraint firstItem="qeR-no-j0Z" firstAttribute="top" secondItem="0yF-cI-nmc" secondAttribute="bottom" constant="5.5" id="Q2l-HW-uPe"/>
                                                 <constraint firstItem="hfR-VB-HjJ" firstAttribute="top" secondItem="yrz-Li-zXG" secondAttribute="bottom" constant="8" id="Q6X-iC-Eon"/>
                                                 <constraint firstItem="EG4-Uu-gLi" firstAttribute="leading" secondItem="ZkZ-iO-ckh" secondAttribute="leadingMargin" id="Q6d-sK-0S9"/>
                                                 <constraint firstItem="hfR-VB-HjJ" firstAttribute="centerY" secondItem="EG4-Uu-gLi" secondAttribute="centerY" id="au5-er-iBc"/>
@@ -114,6 +121,7 @@
                                                 <constraint firstItem="bQC-8M-Xan" firstAttribute="top" secondItem="hfR-VB-HjJ" secondAttribute="bottom" constant="8" id="eC9-69-VYa"/>
                                                 <constraint firstItem="bQC-8M-Xan" firstAttribute="leading" secondItem="hfR-VB-HjJ" secondAttribute="leading" id="fgd-uu-0cC"/>
                                                 <constraint firstItem="wOS-4i-eaw" firstAttribute="leading" secondItem="yrz-Li-zXG" secondAttribute="leading" id="foI-Rm-AnM"/>
+                                                <constraint firstItem="qeR-no-j0Z" firstAttribute="centerX" secondItem="0yF-cI-nmc" secondAttribute="centerX" id="gaB-kE-5bI"/>
                                                 <constraint firstAttribute="trailing" secondItem="0yF-cI-nmc" secondAttribute="trailing" constant="15" id="h6F-2w-tTH"/>
                                                 <constraint firstItem="XAg-eT-W6e" firstAttribute="leading" secondItem="ZkZ-iO-ckh" secondAttribute="leadingMargin" id="kA9-R1-MAR"/>
                                                 <constraint firstItem="EG4-Uu-gLi" firstAttribute="top" secondItem="fWd-oS-qxg" secondAttribute="bottom" constant="8" id="lG2-9v-LE7"/>
@@ -126,6 +134,7 @@
                                         <connections>
                                             <outlet property="addressLabel" destination="yrz-Li-zXG" id="IOh-uT-BJI"/>
                                             <outlet property="cityLabel" destination="hfR-VB-HjJ" id="GAX-Q0-352"/>
+                                            <outlet property="countLabel" destination="qeR-no-j0Z" id="deY-Y5-HR1"/>
                                             <outlet property="nameLabel" destination="wOS-4i-eaw" id="ZTp-cL-CxV"/>
                                             <outlet property="universityLabel" destination="bQC-8M-Xan" id="sDX-kR-dyo"/>
                                         </connections>

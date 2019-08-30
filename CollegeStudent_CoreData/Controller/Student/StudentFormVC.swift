@@ -16,6 +16,8 @@ class StudentFormVC: UIViewController {
     @IBOutlet weak var mobileTF: UITextField!
     @IBOutlet weak var cityTF: UITextField!
     
+    var college : College?
+    
     //MARK: View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +32,8 @@ class StudentFormVC: UIViewController {
         let age = Int(ageTF.text!)
         guard let studentName = nameTF.text, let studentAge = age, let studentMobileNo = mobileTF.text, let studemtCity = cityTF.text else {print("Please fill all details for the student"); return}
         let studentDict = ["name":studentName,"age":studentAge,"number":studentMobileNo,"city":studemtCity] as [String : Any]
-        if DatabaseHelper.sharedInstance.createStudent(objectOf: studentDict) {
+        guard let thisCollege = college else {return}
+        if DatabaseHelper.sharedInstance.createStudent(objectOf: studentDict, toCollege: thisCollege) {
             self.navigationController?.popViewController(animated: true)
             print("Student created successfully")
         }

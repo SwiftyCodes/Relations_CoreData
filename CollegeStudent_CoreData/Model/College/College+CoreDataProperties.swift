@@ -21,5 +21,4 @@ extension College {
     @NSManaged public var address: String?
     @NSManaged public var city: String?
     @NSManaged public var university: String?
-
 }

@@ -15,6 +15,7 @@ class StudentListVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var studentListArray : [NSManagedObject] = []
+    var college: College?
     
     //MARK: View life cycle
     override func viewDidLoad() {
@@ -25,7 +26,10 @@ class StudentListVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
         navigationItem.title = "Student's List"
-        studentListArray = DatabaseHelper.sharedInstance.fetchDataFromEntity(fromEntity: "Student")
+        if college?.students?.allObjects != nil {
+            studentListArray = college?.students?.allObjects as! [NSManagedObject]
+        }
+        //studentListArray = DatabaseHelper.sharedInstance.fetchDataFromEntity(fromEntity: "Student")
         tableView.reloadData()
     }
     
@@ -33,6 +37,12 @@ class StudentListVC: UIViewController {
         performSegue(withIdentifier: "StudentFormVC", sender: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "StudentFormVC" {
+            let studentFormVc = segue.destination as! StudentFormVC
+            studentFormVc.college = college
+        }
+    }
 }
 
 extension StudentListVC : UITableViewDataSource {
@@ -62,7 +72,7 @@ extension StudentListVC : UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         switch editingStyle {
         case .delete:
-            studentListArray = DatabaseHelper.sharedInstance.delete(atIndex: indexPath.row, fromEntity: "Student")
+            studentListArray = DatabaseHelper.sharedInstance.deleteStudent(atIndex: indexPath.row, fromEntity: "Student", fromCollege: college!)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         default:
             break

@@ -21,5 +21,4 @@ extension Student {
     @NSManaged public var city: String?
     @NSManaged public var name: String?
     @NSManaged public var number: String?
-
 }

@@ -21,12 +21,8 @@
 		754E10EB2318490D004D044E /* StudentListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E10EA2318490D004D044E /* StudentListVC.swift */; };
 		754E10EE231850B9004D044E /* CollegeDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E10ED231850B9004D044E /* CollegeDetailsVC.swift */; };
 		754E10F12318638B004D044E /* College.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 754E10EF2318638B004D044E /* College.storyboard */; };
-		754E10F723186507004D044E /* College+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E10F32318649C004D044E /* College+CoreDataClass.swift */; };
-		754E10F823186507004D044E /* College+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E10F42318649C004D044E /* College+CoreDataProperties.swift */; };
 		754E10FC23186953004D044E /* Student.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 754E10FB23186953004D044E /* Student.storyboard */; };
 		754E10FE23186A5E004D044E /* StudentFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E10FD23186A5E004D044E /* StudentFormVC.swift */; };
-		754E110123186D24004D044E /* Student+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E10FF23186D24004D044E /* Student+CoreDataClass.swift */; };
-		754E110223186D24004D044E /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E110023186D24004D044E /* Student+CoreDataProperties.swift */; };
 		754E110423186D3F004D044E /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E110323186D3F004D044E /* PopUpViewController.swift */; };
 		754E1106231870A8004D044E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 754E1105231870A8004D044E /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -391,13 +387,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				754E10F723186507004D044E /* College+CoreDataClass.swift in Sources */,
-				754E10F823186507004D044E /* College+CoreDataProperties.swift in Sources */,
 				754E10FE23186A5E004D044E /* StudentFormVC.swift in Sources */,
-				754E110123186D24004D044E /* Student+CoreDataClass.swift in Sources */,
 				754E10B023183721004D044E /* CollegeStudent_CoreData.xcdatamodeld in Sources */,
 				754E10E423184073004D044E /* CollegeTableViewCell.swift in Sources */,
-				754E110223186D24004D044E /* Student+CoreDataProperties.swift in Sources */,
 				754E10EB2318490D004D044E /* StudentListVC.swift in Sources */,
 				754E10AA23183721004D044E /* CollegeListVC.swift in Sources */,
 				754E10E9231840E2004D044E /* DatabaseHelper.swift in Sources */,

@@ -29,7 +29,7 @@ class DatabaseHelper : NSObject {
         return allData
     }
     
-    //MARK: Delete - Generic
+    //MARK: Delete - College
     func delete(atIndex index: Int, fromEntity entity: String) -> [NSManagedObject] {
         
         var allData = fetchDataFromEntity(fromEntity: entity)
@@ -77,13 +77,13 @@ class DatabaseHelper : NSObject {
     }
     
     //MARK: Update - Student
-    func createStudent(objectOf object: [String:Any]) -> Bool {
+    func createStudent(objectOf object: [String:Any], toCollege college: College) -> Bool {
         let studentObject = NSEntityDescription.insertNewObject(forEntityName: "Student", into: context!) as! Student
         studentObject.name = object["name"] as? String
         studentObject.age = Int16(object["age"] as! Int)
         studentObject.number = object["number"] as? String
         studentObject.city = object["city"] as? String
-        
+        studentObject.universities = college
         do{
             try context?.save()
             print("Data Saved Successfully")
@@ -92,6 +92,24 @@ class DatabaseHelper : NSObject {
             print("Error saving data")
             return false
         }
+    }
+    
+    //MARK: Delete - Student
+    func deleteStudent(atIndex index: Int, fromEntity entity: String, fromCollege thisCollege:College) -> [NSManagedObject] {
+        
+        var allData = thisCollege.students?.allObjects as! [NSManagedObject]
+        thisCollege.removeFromStudents(thisCollege.students?.allObjects[index] as! Student)
+        context?.delete(allData[index]) // Remove data from Entity
+        allData.remove(at: index) // Remove data from Array
+        
+        do{
+            try context?.save()
+            print("Data Deleted Successfully")
+        }catch{
+            print("Error Deleting data")
+        }
+        
+        return allData
     }
     
     //MARK: Update - Student

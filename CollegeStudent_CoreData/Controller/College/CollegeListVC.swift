@@ -91,10 +91,10 @@ extension CollegeListVC : CollegeDetailsVCDelegate {
 
 extension CollegeListVC : CollegeTableViewCellDelegate {
     func studentButtonTapped(cell: CollegeTableViewCell) {
-        let indexPath = self.collegeTableView.indexPath(for: cell)
-        print("indexPath clicked is : \(String(describing: indexPath))")
-        
-        let collegeDetailsVC = UIStoryboard(name: "Student", bundle: nil).instantiateViewController(withIdentifier: "StudentListVC") as! StudentListVC
-        self.navigationController?.pushViewController(collegeDetailsVC, animated: true)
+        if let indexPath = self.collegeTableView.indexPath(for: cell){
+            let studentListVC = UIStoryboard(name: "Student", bundle: nil).instantiateViewController(withIdentifier: "StudentListVC") as! StudentListVC
+            studentListVC.college = collegeListArray[indexPath.row] as? College // Sending College object
+            self.navigationController?.pushViewController(studentListVC, animated: true)
+        }
     }
 }

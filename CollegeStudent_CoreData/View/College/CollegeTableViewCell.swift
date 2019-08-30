@@ -18,6 +18,7 @@ class CollegeTableViewCell: UITableViewCell {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var universityLabel: UILabel!
+    @IBOutlet weak var countLabel: UILabel!
     
     weak var delegate: CollegeTableViewCellDelegate?
     
@@ -32,6 +33,10 @@ class CollegeTableViewCell: UITableViewCell {
         addressLabel.text = collegeValue?.address
         cityLabel.text = collegeValue?.city
         universityLabel.text = collegeValue?.university
+        if let studentsCount =  collegeValue?.students?.allObjects.count{
+            countLabel.text = "\(studentsCount)" 
+        }
+        
     }
     
     @IBAction func studentListAction(_ sender: UIButton) {
